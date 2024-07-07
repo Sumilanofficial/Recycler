@@ -1,7 +1,13 @@
 package com.matrix.recycler
 
-import android.webkit.WebSettings.RenderPriority
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
-data class TaskDataClass (var title:String?=null,
-                          var description:String?=null,
-                          var priority: Int?=0)
+@Entity
+data class TaskDataClass(
+    @PrimaryKey(autoGenerate = true)
+    var id : Int = 0,
+    var title :String ?="",
+    var description : String ?="",
+    var priority:Int?=0
+)
